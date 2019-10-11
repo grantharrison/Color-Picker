@@ -10,10 +10,12 @@ import UIKit
 
 class ColorPickerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
 
-    let colors = ["Red", "Orange", "Yellow", "Green", "Blue", "Purple"]
+    struct colorsStruct {
+        var colors: String
+        var uiColor: UIColor
+    }
     
-    let uiColors = [UIColor.red, UIColor.orange, UIColor.yellow, UIColor.green, UIColor.blue, UIColor.purple, UIColor.brown]
-    
+    var colorList: [colorsStruct] = [colorsStruct(colors: "Red", uiColor: UIColor.red), colorsStruct(colors: "Orange", uiColor: UIColor.orange), colorsStruct(colors: "Yellow", uiColor: UIColor.yellow), colorsStruct(colors: "Green", uiColor: UIColor.green), colorsStruct(colors: "Blue", uiColor: UIColor.blue), colorsStruct(colors: "Purple", uiColor: UIColor.purple)]
     
     @IBOutlet var mainView: UIView!
     @IBOutlet weak var detailLabel: UILabel!
@@ -27,16 +29,16 @@ class ColorPickerViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return colors.count
+        return colorList.count
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
-        detailLabel.text = colors[row]
-        mainView.backgroundColor = uiColors[row]
+        detailLabel.text = colorList[row].colors
+        mainView.backgroundColor = colorList[row].uiColor
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return colors[row]
+        return colorList[row].colors
     }
     
     /*
