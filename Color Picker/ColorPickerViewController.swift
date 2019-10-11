@@ -17,12 +17,19 @@ class ColorPickerViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
     var colorList: [colorsStruct] = [colorsStruct(colors: "Red", uiColor: UIColor.red), colorsStruct(colors: "Orange", uiColor: UIColor.orange), colorsStruct(colors: "Yellow", uiColor: UIColor.yellow), colorsStruct(colors: "Green", uiColor: UIColor.green), colorsStruct(colors: "Blue", uiColor: UIColor.blue), colorsStruct(colors: "Purple", uiColor: UIColor.purple)]
     
+    var startingPoint = 0
+    
+    @IBOutlet weak var picker: UIPickerView!
     @IBOutlet var mainView: UIView!
     @IBOutlet weak var detailLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        detailLabel.text = colorList[startingPoint].colors
+        mainView.backgroundColor = colorList[startingPoint].uiColor
+        picker.selectRow(startingPoint, inComponent: 0, animated: true)
     }
+    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

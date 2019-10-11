@@ -22,14 +22,14 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="So8-H5-357"/>
                                 </connections>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vp-xG-pJH">
-                                <rect key="frame" x="192" y="585.5" width="30" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vp-xG-pJH">
+                                <rect key="frame" x="207" y="606" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.99949318170000001" green="0.017537940290000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="4vp-xG-pJH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2r2-Yf-Vqr"/>
@@ -43,6 +43,7 @@
                     <connections>
                         <outlet property="detailLabel" destination="4vp-xG-pJH" id="aI5-i7-8w9"/>
                         <outlet property="mainView" destination="8bC-Xf-vdC" id="2DC-mL-aJz"/>
+                        <outlet property="picker" destination="nEO-8p-aMH" id="aBF-Dd-lwW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
